@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import axios from '../axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Image, ScrollView, Text} from 'react-native';
 
 import {
     InnerContainer,
@@ -73,32 +74,32 @@ const Welcome = ({navigation}) => {
     }, [getUser])
 
     return (
-        <>
-        <StatusBar style="light"/>
+        <ScrollView>
+            <StatusBar style="light"/>
             <InnerContainer>
-                <WelcomeImage resizeMode="cover" source={require('./../assets/fundo2.jpg')}/>
+                <WelcomeImage source={require('./../assets/fundo2.jpg')}/>
                 <WelcomeContainer>
                     <PageTitle Welcome={true}>Seja bem-vindo(a)!</PageTitle>
                     <SubTitle Welcome={true}>{user.name}</SubTitle>
                     <SubTitle Welcome={true}>{user.email}</SubTitle>
-                 <StyledFormArea>      
-                    <Avatar resizeMode="cover" source={require('./../assets/avatar1.jpg')} />
-                    <Line />
-                        <StyledButton onPress={editar}>
-                            <ButtonText>Editar</ButtonText>
-                        </StyledButton>
-                        <StyledButton onPress={visib}>
-                            <ButtonText>Ficar {user.visible ? 'invisível' : 'visível'}</ButtonText>
-                        </StyledButton>
-                        <StyledButton onPress={sair}>
-                            <ButtonText>Sair</ButtonText>
-                        </StyledButton>
-            
-                </StyledFormArea>
+                    <StyledFormArea>      
+                        <Avatar source={require('./../assets/avatar1.jpg')} />
+                        <Line />
+                            <StyledButton onPress={editar}>
+                                <ButtonText>Editar</ButtonText>
+                            </StyledButton>
+                            <StyledButton onPress={visib}>
+                                <ButtonText>Ficar {user.visible ? 'invisível' : 'visível'}</ButtonText>
+                            </StyledButton>
+                            <StyledButton onPress={sair}>
+                                <ButtonText>Sair</ButtonText>
+                            </StyledButton>
+                
+                    </StyledFormArea>
 
                 </WelcomeContainer>
             </InnerContainer>
-        </>
+        </ScrollView>
     );
 }
 

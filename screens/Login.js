@@ -123,7 +123,6 @@ const Login = ({navigation}) => {
                         </TextLink>
                     </ExtraView>
                     <ExtraView>
-                        <ExtraText>Ainda não tem uma  conta e quer oferecer carona? </ExtraText>
                         <TextLink onPress={() => navigation.navigate("Signupmoto")}>
                             <TextLinkContent> Abrir uma conta de motorista.</TextLinkContent>
                         </TextLink>

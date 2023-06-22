@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "login-carona",
-    "slug": "login-carona",
-    "version": "1.0.0",
+    "name": "Partiu carona",
+    "slug": "partiu-carona",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jessicamoreira.partiucarona"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c217fbbd-bc85-4ba9-800e-10a45d671025"
+      }
     }
   }
 }

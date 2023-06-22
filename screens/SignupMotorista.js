@@ -119,7 +119,7 @@ const showDatePicker = () => {
                         <MyTextInput 
                             label="WhatsApp"
                             icon=""
-                            placeholder="(99) 99999-9999"
+                            placeholder="5515997551298"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('whatsapp')}
                             onBlurText={handleBlur('whatsapp')}

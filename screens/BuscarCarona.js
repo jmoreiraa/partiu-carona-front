@@ -123,7 +123,7 @@ const Login = ({navigation}) => {
                 </StyledButton>
                 <FlatList
                 data={carros}
-                renderItem={({item}) => <CardCustom name={item.name} horario={item.horario} car={item.carro} whatsapp={item.whatsapp} placa={item.placa} />}
+                renderItem={({item}) => <CardCustom name={item.name} passa={item.npessoas} horario={item.horario} car={item.carro} whatsapp={item.whatsapp} placa={item.placa} />}
                 />
                 </StyledFormArea>)}
 
@@ -134,7 +134,7 @@ const Login = ({navigation}) => {
     );
 }
 
-const CardCustom = ({name, car, whatsapp, placa, horario}) => {
+const CardCustom = ({name, car, whatsapp, placa, horario, passa}) => {
     return (
         <TouchableOpacity onPress={async () => await Linking.openURL(`https://api.whatsapp.com/send/?phone=${whatsapp}`)}>
             <Card>
@@ -147,6 +147,8 @@ const CardCustom = ({name, car, whatsapp, placa, horario}) => {
                     <Text style={styles.name}>Nome: {name}  </Text>
                     <Divider orientation="vertical" />
                     <Text style={styles.name}> Carro: {car}  </Text>
+                    <Divider orientation="vertical" />
+                    <Text style={styles.name}> Número de passageiros: {passa}  </Text>
                     <Divider orientation="vertical" />
                     <Text style={styles.name}> Placa: {placa}  </Text>
                     <Divider orientation="vertical" />
@@ -166,6 +168,7 @@ const styles = StyleSheet.create({
     },
     user: {
       flexDirection: 'row',
+      flexWrap: 'wrap',
       marginBottom: 6,
     },
     image: {

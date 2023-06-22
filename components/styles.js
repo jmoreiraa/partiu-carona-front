@@ -18,22 +18,19 @@ export const Colors = {
 const {primary, secondary, tertiary, darkLight, brand, green, red} = Colors;
 
 export const StyledContainer = styled.View`
-    flex: 1;
-    padding 25px;
     padding-top: ${StatusBarHeight + 30}px;
     background-color: ${primary};
 `;
 
 export const InnerContainer = styled.View`
-    flex: 1;
-    width: 100%;
+    display: flex;
     align-items: center;
 `;
 
 export const WelcomeContainer = styled(InnerContainer)`
     padding: 25px;
     padding-top: 10px;
-    justify-content: center;
+    height: 100%;
 `;
 
 export const PageLogo = styled.Image`
@@ -41,11 +38,9 @@ export const PageLogo = styled.Image`
     height: 200px;
 `;
 
-export const Avatar = styled.Image`
-    width: 100px;
+export const Avatar = styled.Image`
     width: 100px;
     height: 100px;
-    margin: auto;
     border-radius: 50px;
     border-width: 2px;
     border-color: ${secondary}; 
@@ -53,9 +48,8 @@ export const Avatar = styled.Image`
     margin-top: 10px; 
 `;
 
-export const WelcomeImage = styled.Image`
-    height: 50%
-    height: 50%
+export const WelcomeImage = styled.Image`
+    height: 250px;
     min-width: 100%;
 `;
 
